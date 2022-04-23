@@ -1,8 +1,6 @@
-## FIFA Analysis
+## FIFA Analysis: Importing and Filtering Raw Data
 ## Author: Alexander Christopher
 ## Date: 04/22/2022
-
-## OS Path: cd Desktop/330_Project
 
 import numpy as np
 import pandas as pd
@@ -62,5 +60,5 @@ goal_columns = list(Goal_Data)
 
 data_inter_path = data_path + "Intermediate/"
 
-Players_Data.to_csv(data_inter_path+"Players_Data")
-Goal_Data.to_csv(data_inter_path+"Goal_Data")
+Players_Data.to_csv(data_inter_path+"Players_Data.csv")
+Goal_Data.to_csv(data_inter_path+"Goal_Data.csv")
