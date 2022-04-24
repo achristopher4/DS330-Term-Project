@@ -7,8 +7,7 @@ import pandas as pd
 import os
 
 
-# Retrieving the data from the Data folder
-
+# Retrieving the data from the Raw Data folder
 data_path = "/Users/alexchristopher/Desktop/330_Project/Python_Code/Data/"
 player_path = data_path+"Raw/players_21.csv"
 Players_Data = pd.read_csv(player_path)
@@ -33,6 +32,10 @@ goals_columns = ['League', 'Team', 'Player', 'Position', 'Appearances', 'Goals',
                 '% Clean Sheets', 'Hat Tricks']
 Goals_Data = Goals_Data[goals_columns]
 
+
+print('Players')
+print(Players_Data.sort_values('long_name').head(15))
+
 print('\nGoals')
 print(Goals_Data.sort_values('Player').head(15))
 
@@ -46,8 +49,4 @@ print(Goals_Data.sort_values('Player').head(15))
 ## Replacing NaN values with 0
 
 
-
-
-
-print('Players')
-print(Players_Data.sort_values('long_name').head(15))
+## Saving Data to the Intermediate Data folder
